@@ -2,7 +2,7 @@ from requests import session
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 #NHL shot analytics medium articles tutorial (for next time) : https://towardsdatascience.com/nhl-analytics-with-python-6390c5d3206d
@@ -200,7 +200,7 @@ with table_expander:
     plt.ylabel("Goals Against Per Game")
     plt.title("Average Goals For Per Game vs. Average Goals Against Per Game")
 
-    #st.pyplot(gf_vs_ga)
+    st.pyplot(gf_vs_ga)
 
 
     #Points vs. Average Goals For Per Game
@@ -211,7 +211,7 @@ with table_expander:
     plt.ylabel("Goals For Per Game")
     plt.title("Points vs. Average Goals For Per Game")
 
-    #st.pyplot(p_vs_gf)
+    st.pyplot(p_vs_gf)
 
 
     #Points vs. Average Goals Against Per Game
@@ -222,7 +222,7 @@ with table_expander:
     plt.ylabel("Goals Against Per Game")
     plt.title("Points vs. Average Goals Against Per Game")
 
-    #st.pyplot(p_vs_ga)
+    st.pyplot(p_vs_ga)
 
 
 
