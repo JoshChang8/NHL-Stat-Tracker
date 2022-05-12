@@ -4,6 +4,6 @@ NHL Statistics webapp that displays regular season statistics of NHL teams and s
 About
 
 
-Tech Stack
-Languages: Python
-Libraries: Pandas, Matplotlib, Pandas, Seaborn, Streamlit
+Tech Stack 
+Languages: Python 
+Libraries: Pandas, Matplotlib, Seaborn, Streamlit
