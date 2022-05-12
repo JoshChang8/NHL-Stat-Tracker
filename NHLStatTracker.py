@@ -6,10 +6,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #NHL shot analytics medium articles tutorial (for next time) : https://towardsdatascience.com/nhl-analytics-with-python-6390c5d3206d
+#Goalie Statistics: https://www.hockey-reference.com/leagues/NHL_2022_goalies.html
 
 st.title('NHL Stat Tracker')
 
-st.write("Regular season statistics of NHL skaters from the last decade.")
+st.write("A webapp that displays the regular season statistics of NHL skaters from the last decade. Statistics include Points, Goals, Assists, and +/- while also filtering statistics by Position and Team. To find stats for a specific player, you can utilize the search function. Analytical insights are also provided for each season exploring the relationships between specific team statistics and end of season team rankings.")
 
 selected_year = st.selectbox('Year', list(reversed(range(2012,2023)))) #Shows statistics of the last decade
 
@@ -88,12 +89,14 @@ col2.metric(most_goals.iloc[0,0], most_goals.iloc[0,5], (most_goals.iloc[0,5]-mo
 #Assist Leaders
 most_assists = playerstats.sort_values(by=['A'], ascending=False)
 col3.subheader("Assists")
-col3.metric(most_assists.iloc[0,0], most_assists.iloc[0,6], (most_assists.iloc[0,6]-most_assists.iloc[1,6]).astype(str))
+col3.metric(most_assists.iloc[0,0], most_assists.iloc[0,6], (most_assists.iloc[0,6]-most_assists.iloc[1,6]).astype(str) )
 
 #+/- Leaders
 plus_minus = playerstats.sort_values(by=['+/-'], ascending=False)
 col4.subheader("+ / -")
 col4.metric(plus_minus.iloc[0,0], plus_minus.iloc[0,8], (plus_minus.iloc[0,8]-plus_minus.iloc[1,8]).astype(str))
+
+st.write('The green indicators are meant to represent how far ahead the stat leader is from second place. For example, if the points leader has 120 points and second place has 115 points, the green indicator will be 5.')
 
 #Expand Stats Tables to show different data frames depending on specific stats
 table_expander = st.expander(label='Expand Table')
@@ -125,7 +128,7 @@ with table_expander:
 
 
 #Show Season Analytics and Correlations
-st.header('Advanced Analytics')
+st.header('League Analytics')
 
 # team_selected_year = st.selectbox('Year', list(reversed(range(2013,2023)))) #Shows statistics of the last decade
 
@@ -202,32 +205,32 @@ with table_expander:
 
     st.pyplot(gf_vs_ga)
 
+    st.write('This scatter plot compares the ***Average Goals For Per Game*** for each team against the ***Average Goals Against Per Game***. Referencing the legend, plots on the graph were categorized by finalized league rankings. Generally, the ***higher ranking teams are placed on the bottom right***, meaning higher goals for per game and low goals against per game. On the contrary, the ***lower ranked teams are placed on the top left*** of the scatter plot, resulting in low goals for per game and high goals against per game. This outcome is expected as higher ranked teams have lower goals against and more goals for, resulting in more games won.')
+
 
     #Points vs. Average Goals For Per Game
     sns.set_context("talk", font_scale=1.1)
-    p_vs_gf = plt.figure(figsize=(8,6))
-    sns.scatterplot(x="PTS", y="GF/G", data=teams_df, color=['green'])
-    plt.xlabel("Points")
-    plt.ylabel("Goals For Per Game")
-    plt.title("Points vs. Average Goals For Per Game")
+    gf_vs_pts = plt.figure(figsize=(8,6))
+    sns.scatterplot(x="GF/G", y="PTS", data=teams_df, color=['green'])
+    plt.xlabel("Average Goals Per Game")
+    plt.ylabel("Points")
+    plt.title("Average Goals For Per Game vs. Points")
 
-    st.pyplot(p_vs_gf)
+    st.pyplot(gf_vs_pts)
+
+    st.write('This scatter plot compares the ***average number goals scored by a team each game*** against the ***number of points for each team in a regular season***. The greater number of goals a team scores per game, the greater number of points a team has. This outcome is expected because a greater number of goals scored means a higher chance of winning, resulting in more points.')
 
 
     #Points vs. Average Goals Against Per Game
     sns.set_context("talk", font_scale=1.1)
-    p_vs_ga = plt.figure(figsize=(8,6))
-    sns.scatterplot(x="PTS", y="GA/G", data=teams_df, color=['red'])
-    plt.xlabel("Points")
-    plt.ylabel("Goals Against Per Game")
-    plt.title("Points vs. Average Goals Against Per Game")
+    ga_vs_pts = plt.figure(figsize=(8,6))
+    sns.scatterplot(x="GA/G", y="PTS", data=teams_df, color=['red'])
+    plt.xlabel("Average Goals Against Per Game")
+    plt.ylabel("Points")
+    plt.title("Average Goals Against Per Game vs. Points")
 
-    st.pyplot(p_vs_ga)
+    st.pyplot(ga_vs_pts)
 
-
-
-    
+    st.write('This scatter plot compares the ***average number of goals against by a team each game*** against the ***number of points for each team in a regular season***. The greater number of goals a team allows per game, the less number of points a team has. This outcome is expected because a greater number of goals allowed means a lower chance of winning, resulting in less points.')
 
 
-
- 
