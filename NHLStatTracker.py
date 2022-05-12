@@ -127,7 +127,9 @@ with table_expander:
 #Show Season Analytics and Correlations
 st.header('Advanced Analytics')
 
-team_selected_year = st.selectbox('Year', list(reversed(range(2013,2023)))) #Shows statistics of the last decade
+# team_selected_year = st.selectbox('Year', list(reversed(range(2013,2023)))) #Shows statistics of the last decade
+
+team_selected_year = st.selectbox('Year', ('2022','2020','2019','2018','2017','2016','2015','2014','2013')) #Shows team stats of last decade
 
 # Web scraping of NHL player stats
 def load_data(team_year):
@@ -185,8 +187,6 @@ def load_data(team_year):
 
 teams_df = load_data(team_selected_year)
 
-teams_df
-
 #Expand Stats Tables to show different data frames depending on specific stats
 table_expander = st.expander(label='See Analytics')
 with table_expander:
@@ -223,7 +223,6 @@ with table_expander:
     plt.title("Points vs. Average Goals Against Per Game")
 
     st.pyplot(p_vs_ga)
-
 
 
 
