@@ -18,7 +18,7 @@ User’s can explore player statistics; including indicators such as Points, Goa
 
 Analytical insights are also provided for each season exploring the relationships between specific team statistics and end of season rankings. Team statistics such as Average Goals Against and Average Goals For are key indicators of a team's success.
 
-### Walkthrough
+## Walkthrough
 ### View Each Season’s Player Statistics
 
 ![Player Stats](/app-demo/Season-Stats.gif)
