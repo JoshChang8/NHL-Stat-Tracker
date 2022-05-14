@@ -1,13 +1,28 @@
 # NHL-Stat-Tracker
-NHL Stat Tracker webapp that displays the regular season statistics of skaters and teams from the past decade. This webapp was programmed using Python, using Pandas and Numpy for data collection and cleaning, matplotlib and seaborn for data visualization, and streamlit to help display information on the webapp. 
+NHL Stat Tracker web app that displays the regular season statistics of skaters and teams from the past decade. This web app was programmed using Python, using Pandas and Numpy for data collection and cleaning, Matplotlib and Seaborn for data visualization, and Streamlit to help display information on the web app. 
 
 <p align="center">
   <img src="/app-demo/NHL-Logo.png" alt="NHL_logo" width="150" height="150"/>
 </p>
 
-About
+### Inspiration Behind the App
+Statistics in hockey are essential for team success and are key indicators of a player's performance. Statistics provides insights to coaches and provides feedback for players and teams. This web app provides information about the league's top performers and key team statistics that strongly correlate to a team’s success in the regular season. Exploring these statistics can increase a team’s chance of winning by looking at specific statistics and key performance indicators. 
+
+### Tech Stack
+**Languages**: Python </br>
+**Libraries**: Pandas, Numpy, Matplotlib, Seaborn, Streamlit </br>
+**IDE**: VS Code, Jupyter Notebook </br>
+
+### About
+User’s can explore player statistics; including indicators such as Points, Goals, Assists, and +/-. To narrow the search, users can also filter statistics by Position and Team. To find statistics of a specific player, you can utilize the search function. This data can be accessed dating back to 10 years. 
+
+Analytical insights are also provided for each season exploring the relationships between specific team statistics and end of season rankings. Team statistics such as Average Goals Against and Average Goals For are key indicators of a team's success.
+
+### Walkthrough
+View Each Season’s Player Statistics
+
+![Player Stats](/app-demo/Season-Stats.gif)
 
 
-Tech Stack 
-Languages: Python 
-Libraries: Pandas, Matplotlib, Seaborn, Streamlit
+
+
