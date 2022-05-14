@@ -36,7 +36,7 @@ Search up the statistics of a specific player to see the number of Points, Goals
 ### League Analytics 
 Check out the league analytics for each year and see how significant some team statistics are to a team's performance, such as Average Goals For or Average Goals Against. 
 
-![League Analytics](/app-demo/League-Analytics.gif)
+![League Analytics](/app-demo/Team-Analytics.gif)
 
 
 
