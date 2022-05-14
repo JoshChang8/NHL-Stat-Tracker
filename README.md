@@ -38,6 +38,14 @@ Check out the league analytics for each year and see how significant some team s
 
 ![League Analytics](/app-demo/Team-Analytics.gif)
 
+## Next Steps 
+* Provide visual graphics of shot analysis for each player or team. This could visually show users where players score the majority of their goals from and their sweet spots
+* Include a Goalie statistics section and evaluate the relationship between goalie performance and team success
+* Display a player or team's performance over time with different intervals. Including a player's statistics from the past 10 games can give valuable insights to coaches, letting them know which players are on a hot streak 
+
+
+
+
 
 
 
