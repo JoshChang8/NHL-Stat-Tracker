@@ -19,9 +19,28 @@ User’s can explore player statistics; including indicators such as Points, Goa
 Analytical insights are also provided for each season exploring the relationships between specific team statistics and end of season rankings. Team statistics such as Average Goals Against and Average Goals For are key indicators of a team's success.
 
 ### Walkthrough
-View Each Season’s Player Statistics
+### View Each Season’s Player Statistics
 
 ![Player Stats](/app-demo/Season-Stats.gif)
+
+### Filter Each Year’s Statistics by Position and Team
+You can filter the statistics to show the top stat leaders for your favourite team. You can also further filter by a player's position.
+
+![Filter Stats](/app-demo/Filter-Stats.gif)
+
+### Search For a Specific Players Statistics 
+Search up the statistics of a specific player to see the number of Points, Goals, Assists, and +/- scores for the corresponding season. 
+
+![Player Search](/app-demo/Player-Search.gif)
+
+### League Analytics 
+Check out the league analytics for each year and see how significant some team statistics are to a team's performance, such as Average Goals For or Average Goals Against. 
+
+![League Analytics](/app-demo/League-Analytics.gif)
+
+
+
+
 
 
 
